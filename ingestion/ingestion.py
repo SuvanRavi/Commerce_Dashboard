@@ -95,7 +95,7 @@ def flatten_users(raw: list[dict]) -> pd.DataFrame:
             "id": user.get("id"),
             "username": user.get("username"),
             "email": user.get("email"),
-            "first_ name": name.get("firstname"),
+            "first_name": name.get("firstname"),
             "last_name": name.get("lastname"),
             "phone": user.get("phone"),
             "city": address.get("city"),
