@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ecommerce_raw
+    database: "{{ env_var('GOOGLE_CLOUD_PROJECT') }}"
+    schema: ecommerce_raw
+    tables:
+      - name: products
+      - name: carts
+      - name: users
