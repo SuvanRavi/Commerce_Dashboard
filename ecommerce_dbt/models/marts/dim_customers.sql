@@ -8,6 +8,6 @@ select
     last_name,
     concat(first_name, ' ', last_name) as full_name,
     email,
-    city
-
+    city,
+    zipcode
 from stg
