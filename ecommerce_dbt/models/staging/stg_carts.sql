@@ -12,6 +12,8 @@ renamed AS (
         ingested_at
 
     FROM source
+    WHERE date(cast(cart_date as timestamp)) >= '2024-01-01'
+
     qualify row_number() OVER (
         PARTITION BY cart_id, product_id
         ORDER BY ingested_at DESC
