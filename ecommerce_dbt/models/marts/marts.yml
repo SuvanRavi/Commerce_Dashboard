@@ -26,3 +26,23 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: customer_order_freq
+    columns:
+      - name: order_frequency_band
+        tests:
+          - not_null
+      - name: num_customers
+        tests:
+          - not_null
+
+  - name: customer_churn_metrics
+    columns:
+      - name: order_month
+        tests:
+          - not_null
+      - name: customer_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['New', 'Returning']
