@@ -19,9 +19,9 @@ INGESTED_AT = datetime.now(timezone.utc).isoformat()
 
 # DATA GENERATION CONFIGS
 
-NUM_USERS = 200
-NUM_CARTS = 2000
-MAX_ITEMS = 7
+NUM_USERS = 50
+NUM_CARTS = 500
+MAX_ITEMS = 4
 PRODUCT_IDS = list(range(1,21)) # DONT CHANGE. NUMBER BASED ON FakeStore API
 CATEGORIES = ['electronics', 'jewelery', "men's clothing", "women's clothing"]  
 
@@ -31,7 +31,7 @@ def generate_users(n:int) -> pd.DataFrame:
     rows = []
     for i in range(1, n+1):
         rows.append({
-            "id": i + 100,
+            "id": i + 200,
             "email": fake.email(),
             "username": fake.user_name(),
             "first_name": fake.first_name(),
@@ -47,7 +47,7 @@ def generate_users(n:int) -> pd.DataFrame:
 
 def generate_carts(n: int, user_ids: list, product_ids: list) -> pd.DataFrame:
     rows = []
-    cart_id = 100   # offset to avoid collision with real API carts
+    cart_id = random.randint(200, 1000)   # offset to avoid collision with real API carts
 
     # Generate dates spread across the last 2 years for meaningful time series
     start_date = datetime.now() - timedelta(days=730)
