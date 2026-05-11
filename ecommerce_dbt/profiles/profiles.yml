@@ -1,0 +1,10 @@
+ecommerce_dbt:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GOOGLE_CLOUD_PROJECT') }}"
+      dataset: ecommerce_raw
+      threads: 4
+      timeout_seconds: 300

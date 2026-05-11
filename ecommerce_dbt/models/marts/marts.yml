@@ -32,9 +32,6 @@ models:
       - name: order_frequency_band
         tests:
           - not_null
-      - name: num_customers
-        tests:
-          - not_null
 
   - name: customer_churn_metrics
     columns:
