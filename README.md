@@ -36,8 +36,8 @@ The data model follows a **star schema** pattern:
 - `dim_customers` — customer attributes including city and order frequency band
 
 Two additional analytical models are built on top of the marts:
-- `customer_new_vs_returning`
-- `customer_order_frequency`
+- `customer_churn_metrics`
+- `customer_order_freq`
 
 ## Dashboard Features
 - Executive summary with revenue KPIs
@@ -47,14 +47,14 @@ Two additional analytical models are built on top of the marts:
 - New vs returning customer trend
 
 ## Pipeline Flow
-Cloud Scheduler (daily)
-↓
-Cloud Run Job (Docker container)
-├── ingest.py       → Fetches API data → BigQuery raw layer
-└── dbt run         → Staging views → Mart tables
-dbt test        → Data quality validation
-↓
-Looker Studio dashboard (auto-refreshed)
+Cloud Scheduler (daily)  
+↓  
+Cloud Run Job (Docker container)  
+├── ingest.py       → Fetches API data → BigQuery raw layer  
+└── dbt run         → Staging views → Mart tables  
+dbt test        → Data quality validation  
+↓  
+Looker Studio dashboard (auto-refreshed)  
 
 ## Key Insights
 - There is a clear seasonality pattern observed yearly with revenue typically peaking around October to November. This could indicate an increasing spending habit among consumers around the pre-winter period.
