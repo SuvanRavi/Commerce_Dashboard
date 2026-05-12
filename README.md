@@ -3,7 +3,7 @@
 An automated end-to-end data pipeline that ingests e-commerce data from a REST API, transforms it through a layered dbt architecture on Google BigQuery, and serves a live business intelligence dashboard — deployed on GCP with zero manual intervention.
 
 ## Live Dashboard
-[Click here to view →] (https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)
+[Click here to view →](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)
 
 ## Project Overview
 This project was built to demonstrate production-grade data engineering practices — real API ingestion, cloud deployment, automated orchestration, and business-focused visualisation — using an e-commerce domain as the analytical context.
@@ -13,7 +13,7 @@ Data is sourced from the [Fake Store API](https://fakestoreapi.com) and suppleme
 Raw data lands in BigQuery in an **append-only pattern** — every pipeline run appends timestamped rows without overwriting, preserving full ingestion history. Transformations are handled by **dbt Core**, which builds a star schema through two layers: a staging layer for cleaning and standardisation, and a marts layer for business metrics and KPIs. The entire pipeline runs automatically on a weekly schedule via **GCP Cloud Scheduler and Cloud Run**, with dbt data quality tests executing after every transformation run.
 
 ## Architecture
-[archi.png](archi.png)
+![archi.png](archi.png)
 
 ## Tech Stack
 | Layer | Technology |
@@ -27,7 +27,7 @@ Raw data lands in BigQuery in an **append-only pattern** — every pipeline run 
 | Visualisation | Google Data Studio |
 
 ## Data Model
-[DB_graph.png](DB_graph.png)
+![DB_graph.png](DB_graph.png)
 
 The data model follows a **star schema** pattern:
 
