@@ -4,9 +4,8 @@ An automated end-to-end data pipeline that ingests e-commerce data from a REST A
 
 ## Live Dashboard
 [→ Google Data Studio Dashboard](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)  
-![looker3.png](looker3.png)
-![looker2.png](looker2.png)
-![looker1.png](looker1.png)
+
+![looker3.png](looker3.png)  
 
 ## Project Overview
 This project was built to demonstrate production-grade data engineering practices — real API ingestion, cloud deployment, automated orchestration, and business-focused visualisation — using an e-commerce domain as the analytical context.
