@@ -3,7 +3,7 @@
 An automated end-to-end data pipeline that ingests e-commerce data from a REST API, transforms it through a layered dbt architecture on Google BigQuery, and serves a live business intelligence dashboard — deployed on GCP with zero manual intervention.
 
 ## Live Dashboard
-[→ Google Data Studio Dashboard](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)
+[→ Google Data Studio Dashboard](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)  
 ![looker3.png](looker3.png)
 ![looker2.png](looker2.png)
 ![looker1.png](looker1.png)
