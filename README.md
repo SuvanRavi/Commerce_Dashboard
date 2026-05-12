@@ -3,7 +3,7 @@
 An automated end-to-end data pipeline that ingests e-commerce data from a REST API, transforms it through a layered dbt architecture on Google BigQuery, and serves a live business intelligence dashboard — deployed on GCP with zero manual intervention.
 
 ## Live Dashboard
-[Click here to view →](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)
+[→ Google Data Studio Dashboard](https://datastudio.google.com/reporting/5c9211f1-8115-430b-879d-d146ab93248f)
 
 ## Project Overview
 This project was built to demonstrate production-grade data engineering practices — real API ingestion, cloud deployment, automated orchestration, and business-focused visualisation — using an e-commerce domain as the analytical context.
@@ -47,14 +47,14 @@ Two additional analytical models are built on top of the marts:
 - New vs returning customer trend
 
 ## Pipeline Flow
-Cloud Scheduler (daily)  
+**Cloud Scheduler (weekly)**  
 ↓  
-Cloud Run Job (Docker container)  
+**Cloud Run Job (Docker container)**  
 ├── ingest.py       → Fetches API data → BigQuery raw layer  
-└── dbt run         → Staging views → Mart tables  
-dbt test        → Data quality validation  
+├── dbt run         → Staging views → Mart tables  
+└── dbt test        → Data quality validation  
 ↓  
-Looker Studio dashboard (auto-refreshed)  
+**Looker Studio dashboard (auto-refreshed)**  
 
 ## Key Insights
 - There is a clear seasonality pattern observed yearly with revenue typically peaking around October to November. This could indicate an increasing spending habit among consumers around the pre-winter period.
